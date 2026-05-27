@@ -4,7 +4,12 @@
 const rps = ["Rock","Paper","Scissors"];
 //then we create a function that lets the computer make a choice from the available options.
 
+
+
 function getComputerChoice() {
     return rps[Math.floor(Math.random() * rps.length)];
 }
 
+function getHumanChoice() {
+    let choice = prompt("Choose Rock, Paper, or Scissors:");
+}
