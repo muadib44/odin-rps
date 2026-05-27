@@ -12,4 +12,15 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     let choice = prompt("Choose Rock, Paper, or Scissors:");
+    return choice.charAt(0).toUpperCase() + choice.slice(1).toLowerCase();
+}
+
+//create variables to store the scores of the game
+let humanScore = 0;
+let computerScore = 0;
+
+//create the main game function
+
+function playRound() {
+    
 }
