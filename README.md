@@ -1,2 +1,2 @@
 # odin-rps
-This is project to practoce basic Java script concepts by making a Rock, Paper and Scissors game.
+This is a project to practice basic JavaScript concepts by making a Rock, Paper, Scissors game.
