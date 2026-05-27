@@ -37,7 +37,13 @@ function playRound(humanChoice,computerChoice) {
     }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+function playGame() {
+    for (let i = 0; i < 5; i++) {
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+        playRound(humanSelection, computerSelection);
+    }
+    console.log(`Final Score - You: ${humanScore}, Computer: ${computerScore}`);
+}
 
-playRound(humanSelection, computerSelection);
+playGame();
