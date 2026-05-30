@@ -1,0 +1,46 @@
+body {
+ background-color:green;
+}
+
+.heading {
+ font-weight:bold;
+ font-size:36px;
+ color:aliceblue;
+ align-content:center;
+ margin-bottom:10px;
+ padding:20px;
+}
+
+.choices {
+ color:aqua;
+ font-size:18px;
+ margin: 5px;
+ align-content: center;
+}
+
+.results {
+ color:bisque;
+ font-size:16px;
+ margin: 5px;
+ align-content: center;
+}
+
+.buttons {
+ margin: 5px;
+ align-content: center;
+}
+
+.buttons #play-button {
+ background-color:blue;
+ color:white;
+ font-size:16px;
+ padding:10px;
+ margin-right:10px;
+}
+
+.buttons #new-game {
+ background-color:White;
+ color:goldenrod;
+ font-size:16px;
+ padding:10px;
+}
