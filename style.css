@@ -2,7 +2,7 @@ body {
  background-color:green;
 }
 
-.heading {
+#heading {
  font-weight:bold;
  font-size:36px;
  color:aliceblue;
@@ -11,26 +11,26 @@ body {
  padding:20px;
 }
 
-.choices {
+#choices {
  color:aqua;
  font-size:18px;
  margin: 5px;
  align-content: center;
 }
 
-.results {
+#results {
  color:bisque;
  font-size:16px;
  margin: 5px;
  align-content: center;
 }
 
-.buttons {
+#buttons {
  margin: 5px;
  align-content: center;
 }
 
-.buttons #play-button {
+#buttons #play-button {
  background-color:blue;
  color:white;
  font-size:16px;
@@ -38,7 +38,7 @@ body {
  margin-right:10px;
 }
 
-.buttons #new-game {
+#buttons #new-game {
  background-color:White;
  color:goldenrod;
  font-size:16px;
