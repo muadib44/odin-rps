@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>"
+    <script src="script.js" defer></script>"
 </head>
 <body>
-    <input type="text" id="human-choice" placeholder="Choose Rock, Paper, or Scissors: ">
-    <button id="computer-choice" onclick="getComputerChoice()">Computer Choice</button>
-    <button id="play-button" onclick="playGame()">Play Game</button>
+    <p>Choose Rock, Paper, or Scissors: <input type="text" id="human-choice"></p>
+    <div>
+        <button id="computer-choice" onclick="getComputerChoice()">Computer Choice</button>
+        <button id="play-button" onclick="playGame()">Play Game</button>
+    </div>
 
-    <div id="result"></div>
+    <div>
+        <p id="round-result"></p>
+        <p id="final-score"></p>
+    </div>
 </body>
 </html>

@@ -1,4 +1,5 @@
-const result = document.getElementById("result");
+const roundResult = document.getElementById("round-result");
+const finalScore = document.getElementById("final-score");
 const humanChoice = document.getElementById("human-choice");
 const computerChoice = document.getElementById("computer-choice");
 const rps = ["Rock","Paper","Scissors"];
@@ -7,11 +8,15 @@ const rps = ["Rock","Paper","Scissors"];
 
 
 function getComputerChoice() {
-    computerChoice.innerText = rps[Math.floor(Math.random() * rps.length)];
+    return computerChoice.innerText = rps[Math.floor(Math.random() * rps.length)];
 }
 
 function getHumanChoice() {
-    humanChoice.innerText = humanChoice.value.charAt(0).toUpperCase() + humanChoice.value.slice(1).toLowerCase();
+    if (!rps.includes(humanChoice)) {
+        return humanChoice.value = humanChoice.value.charAt(0).toUpperCase() + humanChoice.value.slice(1).toLowerCase();
+    } else {
+        return roundResult.innerText = "Incorrect Human Choice!!"
+    }
 }
 
 
@@ -21,27 +26,28 @@ let computerScore = 0;
 //create the main game function
 
 function playRound(humanChoice,computerChoice) {
+
     if (humanChoice === computerChoice) {
-        console.log("It's a tie!");
+        roundResult.innerText = "It's a tie!";
     } else if (
         (humanChoice === "Rock" && computerChoice === "Scissors") ||
         (humanChoice === "Paper" && computerChoice === "Rock") ||
         (humanChoice === "Scissors" && computerChoice === "Paper")
     ) {
-        console.log(`You win! ${humanChoice} beats ${computerChoice}`);
-        humanScore++;
+        humanScore++
+        roundResult.innerText = `You win! ${humanChoice} beats ${computerChoice} | Score: You: ${humanScore}, Computer: ${computerScore}`;
     } else {
-        console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
         computerScore++;
+        roundResult.innerText = `You lose! ${computerChoice} beats ${humanChoice} | Score: You: ${humanScore}, Computer: ${computerScore}`;
+    }
+
+    if (humanScore === 5 || computerScore === 5) {
+        finalScore.innerText = `Final Score - You: ${humanScore}, Computer: ${computerScore}`;
     }
 }
 
 function playGame() {
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-    let result =`Final Score - You: ${humanScore}, Computer: ${computerScore}`;
-    result.innerText = result;
+    playRound(getHumanChoice, getComputerChoice);
 }
-
-playGame();
