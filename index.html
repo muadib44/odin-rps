@@ -7,15 +7,19 @@
     <script src="script.js" defer></script>"
 </head>
 <body>
-    <p>Choose Rock, Paper, or Scissors: <input type="text" id="human-choice"></p>
     <div>
-        <button id="computer-choice" onclick="getComputerChoice()">Computer Choice</button>
-        <button id="play-button" onclick="playGame()">Play Game</button>
+        <p>Choose Rock, Paper, or Scissors: <input type="text" id="human-choice"></p>
+        <p><button id="computer-choice" onclick="getComputerChoice()">Computer Choice</button></p>     
     </div>
 
     <div>
         <p id="round-result"></p>
         <p id="final-score"></p>
+    </div>
+
+    <div>
+        <button id="play-button" onclick="playGame()">Play Game</button>
+        <button id="new-game" onclick="newGame()">New Game</button>
     </div>
 </body>
 </html>

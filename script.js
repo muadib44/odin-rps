@@ -53,3 +53,12 @@ function playRound(humanChoice,computerChoice) {
 function playGame() {
     playRound(humanSelection, computerSelection);
 }
+
+function newGame() {
+    humanScore = 0;
+    computerScore = 0;
+    roundResult.innerText = "";
+    finalScore.innerText = "";
+    humanChoice.value = "";
+    computerChoice.innerText = "Computer Choice";
+}
