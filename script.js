@@ -12,13 +12,11 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    if (!rps.includes(humanChoice)) {
-        return humanChoice.value = humanChoice.value.charAt(0).toUpperCase() + humanChoice.value.slice(1).toLowerCase();
-    } else {
-        return roundResult.innerText = "Incorrect Human Choice!!"
-    }
+     return humanChoice = humanChoice.value.charAt(0).toUpperCase() + humanChoice.value.slice(1).toLowerCase();
 }
 
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
 
 let humanScore = 0;
 let computerScore = 0;
@@ -26,6 +24,10 @@ let computerScore = 0;
 //create the main game function
 
 function playRound(humanChoice,computerChoice) {
+
+    if (!rps.includes(humanSelection)) {
+        roundResult.innerText = "You made an Invalid Choice!!"
+    }
 
     if (humanChoice === computerChoice) {
         roundResult.innerText = "It's a tie!";
@@ -41,13 +43,13 @@ function playRound(humanChoice,computerChoice) {
         roundResult.innerText = `You lose! ${computerChoice} beats ${humanChoice} | Score: You: ${humanScore}, Computer: ${computerScore}`;
     }
 
-    if (humanScore === 5 || computerScore === 5) {
-        finalScore.innerText = `Final Score - You: ${humanScore}, Computer: ${computerScore}`;
+    if (humanScore === 5) {
+        finalScore.innerText = `Final Score - You: ${humanScore}, Computer: ${computerScore}. You win!!! 🤩`;
+    } else {
+        finalScore.innerText = `Final Score - You: ${humanScore}, Computer: ${computerScore}. You lose!!! 😞`;
     }
 }
 
 function playGame() {
-    const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoice();
-    playRound(getHumanChoice, getComputerChoice);
+    playRound(humanSelection, computerSelection);
 }
