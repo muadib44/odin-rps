@@ -1,21 +1,20 @@
-//this is a rock paper scissors game.
-//the first thing to do is to create an array for the options.
-
+const result = document.getElementById("result");
+const humanChoice = document.getElementById("human-choice");
+const computerChoice = document.getElementById("computer-choice");
 const rps = ["Rock","Paper","Scissors"];
-//then we create a function that lets the computer make a choice from the available options.
+
 
 
 
 function getComputerChoice() {
-    return rps[Math.floor(Math.random() * rps.length)];
+    computerChoice.innerText = rps[Math.floor(Math.random() * rps.length)];
 }
 
 function getHumanChoice() {
-    let choice = prompt("Choose Rock, Paper, or Scissors:");
-    return choice.charAt(0).toUpperCase() + choice.slice(1).toLowerCase();
+    humanChoice.innerText = humanChoice.value.charAt(0).toUpperCase() + humanChoice.value.slice(1).toLowerCase();
 }
 
-//create variables to store the scores of the game
+
 let humanScore = 0;
 let computerScore = 0;
 
@@ -38,10 +37,11 @@ function playRound(humanChoice,computerChoice) {
 }
 
 function playGame() {
-     const humanSelection = getHumanChoice();
+    const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
-    console.log(`Final Score - You: ${humanScore}, Computer: ${computerScore}`);
+    let result =`Final Score - You: ${humanScore}, Computer: ${computerScore}`;
+    result.innerText = result;
 }
 
 playGame();
