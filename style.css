@@ -1,5 +1,8 @@
 body {
- background-color:green;
+ background-color:midnightblue;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
 }
 
 #heading {
@@ -11,36 +14,50 @@ body {
  padding:20px;
 }
 
-#choices {
- color:aqua;
+#choice-container {
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ margin: 20px;
+ color:aliceblue;
  font-size:18px;
- margin: 5px;
- align-content: center;
+ margin: 10px;
+}
+
+#choice-buttons {
+ display:flex;
+ justify-content:center;
+ gap: 15px;
 }
 
 #results {
- color:bisque;
+ display:flex;
+ flex-direction:column;  
+ align-items:center;
+ color:aliceblue;
  font-size:16px;
- margin: 5px;
- align-content: center;
+ margin: 10px;
 }
 
-#buttons {
- margin: 5px;
- align-content: center;
+#game-buttons {
+ display:flex;
+ justify-content:center;
+ gap: 10px;
+ margin: 10px 0;
 }
 
-#buttons #play-button {
- background-color:blue;
- color:white;
+#game-buttons #play-button {
+ background-color:goldenrod;
+ color:aliceblue;
  font-size:16px;
  padding:10px;
- margin-right:10px;
+ border:none;
 }
 
-#buttons #new-game {
+#game-buttons #new-game {
  background-color:White;
  color:goldenrod;
  font-size:16px;
  padding:10px;
+ border:none;
 }

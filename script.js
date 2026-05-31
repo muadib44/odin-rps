@@ -46,7 +46,6 @@ function playRound(humanChoice,computerChoice) {
 }
 
 function playGame() {
-    humanSelection = getPlayerChoice();
     computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
 }
@@ -56,6 +55,6 @@ function newGame() {
     computerScore = 0;
     roundResult.innerText = "";
     finalScore.innerText = "";
-    humanChoice.value = "";
-    computerChoice.innerText = "Computer Choice";
+    humanSelection = "";
+    computerSelection = "";
 }
