@@ -1,7 +1,5 @@
 const roundResult = document.getElementById("round-result");
 const finalScore = document.getElementById("final-score");
-const computerChoice = document.getElementById("computer-choice");
-const getPlayerChoice = document.getElementById("choice-buttons");
 let humanSelection = "";
 let computerSelection = "";
 const rps = ["Rock","Paper","Scissors"];
@@ -12,10 +10,8 @@ function getPlayerChoice(choice) {
 }
 
 function getComputerChoice() {
-    return computerChoice.innerText = rps[Math.floor(Math.random() * rps.length)];
+    return rps[Math.floor(Math.random() * rps.length)];
 }
-
-const computerSelection = getComputerChoice();
 
 let humanScore = 0;
 let computerScore = 0;
@@ -40,9 +36,12 @@ function playRound(humanChoice,computerChoice) {
 
     if (humanScore === 5) {
         finalScore.innerText = `Final Score - You: ${humanScore}, Computer: ${computerScore}. You win!!! 🤩`;
-    } else {
+    } else if (computerScore === 5) {
         finalScore.innerText = `Final Score - You: ${humanScore}, Computer: ${computerScore}. You lose!!! 😞`;
+    } else {
+        finalScore.innerText = `Score - You: ${humanScore}, Computer: ${computerScore}. First to 5 wins!`;
     }
+
 }
 
 function playGame() {
@@ -53,8 +52,8 @@ function playGame() {
 function newGame() {
     humanScore = 0;
     computerScore = 0;
-    roundResult.innerText = "";
-    finalScore.innerText = "";
+    roundResult.innerText = `Choose your option and press "Play Game"!`;
+    finalScore.innerText = "Play 1 round to see the scores!";
     humanSelection = "";
     computerSelection = "";
 }
