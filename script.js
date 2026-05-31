@@ -1,18 +1,14 @@
 const roundResult = document.getElementById("round-result");
 const finalScore = document.getElementById("final-score");
-const humanChoice = document.getElementById("human-choice");
 const computerChoice = document.getElementById("computer-choice");
+const getPlayerChoice = document.getElementById("choice-buttons");
 const rps = ["Rock","Paper","Scissors"];
 
 
-
+function getPlayerChoice(choice) {
 
 function getComputerChoice() {
     return computerChoice.innerText = rps[Math.floor(Math.random() * rps.length)];
-}
-
-function getHumanChoice() {
-     return humanChoice = humanChoice.value.charAt(0).toUpperCase() + humanChoice.value.slice(1).toLowerCase();
 }
 
 const humanSelection = getHumanChoice();
@@ -24,10 +20,6 @@ let computerScore = 0;
 //create the main game function
 
 function playRound(humanChoice,computerChoice) {
-
-    if (!rps.includes(humanSelection)) {
-        roundResult.innerText = "You made an Invalid Choice!!"
-    }
 
     if (humanChoice === computerChoice) {
         roundResult.innerText = "It's a tie!";
