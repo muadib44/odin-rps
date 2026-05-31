@@ -2,16 +2,19 @@ const roundResult = document.getElementById("round-result");
 const finalScore = document.getElementById("final-score");
 const computerChoice = document.getElementById("computer-choice");
 const getPlayerChoice = document.getElementById("choice-buttons");
+let humanSelection = "";
+let computerSelection = "";
 const rps = ["Rock","Paper","Scissors"];
 
 
 function getPlayerChoice(choice) {
+    humanSelection = choice;
+}
 
 function getComputerChoice() {
     return computerChoice.innerText = rps[Math.floor(Math.random() * rps.length)];
 }
 
-const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
 let humanScore = 0;
@@ -43,6 +46,8 @@ function playRound(humanChoice,computerChoice) {
 }
 
 function playGame() {
+    humanSelection = getPlayerChoice();
+    computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
 }
 
